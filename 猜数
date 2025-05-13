@@ -1,0 +1,17 @@
+import random
+
+num = random.randint(1, 100)
+flag = True
+count = 0
+while flag:
+    guessnum = int(input("猜测数字"))
+    count += 1
+    if (guessnum == num):
+        print("中了")
+        flag = False
+    elif (guessnum > num):
+        print("大了")
+    else:
+        print("小了")
+
+print(f"猜了{count}次")

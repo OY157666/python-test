@@ -1,0 +1,50 @@
+money = 5000000
+name = input("输入名字")
+print(name)
+
+
+def query():
+    print("---查询余额---")
+    print(f"{name},剩余{money}元")
+
+
+def saving(num):
+    global money
+    money += num
+    print("---存款---")
+    print(f"{name},存款{num}元")
+    print(f"{name},剩余{money}元")
+
+
+def get_money(num):
+    money -= num
+    print(f"{name},取款{money}元")
+    print(f"{name},剩余{money}元")
+
+
+def main():
+    print("---主菜单---")
+    print(f"{name},你好")
+    print("查询余额\t[输入1]")
+    print("存款\t[输入2]")
+    print("取款\t[输入3]")
+    print("退出\t[输入4]")
+    return  int (input("输入你的选择"))
+
+
+while True:
+    key = main()
+    if key == 1:
+        query()
+        continue
+    elif key == 2:
+        num = int(input("存多少"))
+        saving(num)
+        continue
+    elif key == 3:
+        num = int(input("取多少"))
+        get_money(num)
+        continue
+    else :
+        print("退出")
+        break

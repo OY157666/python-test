@@ -1,0 +1,6 @@
+import my_package.my_module1
+from my_package import my_module2
+print(my_package.my_module1.str_reverse("1234456"))
+print(my_package.my_module1.substr("qwert",0,4))
+my_module2.append_to_file("E:\\o'y'j's\\Documents\\test.txt","asdf")
+my_module2.print_file_info("E:\\o'y'j's\\Documents\\test.txt")
